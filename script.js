@@ -38,10 +38,10 @@ const questions = [
     {
         question: "wat is een gillende keukenmeid",
         answers: [
-            {text: "iemand die hard gilt", correct: true }
-            {text  "een soort vuurwerk", correct: true}
-            {text: "lis want ze gilt te veel", correct: false}
-            {text: "een kok in de keuken", correct: false}
+            { text: "iemand die hard gilt", correct: true },
+            { text:  "een soort vuurwerk", correct: true },
+            { text: "lis want ze gilt te veel", correct: false },
+            { text: "een kok in de keuken", correct: false },
         ]
     }
 ];
