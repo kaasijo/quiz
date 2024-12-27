@@ -27,7 +27,7 @@ const questions = [
         ]
     },
 ];
-
+//hallo ik ben cas en dit is van mij
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const nextButton = document.getElementById('next-btn');
