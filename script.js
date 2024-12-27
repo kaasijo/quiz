@@ -26,6 +26,24 @@ const questions = [
             { text: "wilhelmus", correct: false }
         ]
     },
+    {
+        question: "Wat drinken mensen om 12 uur’s nachts met Oudjaar vaak?",
+        answers: [
+            { text: "water", correct: false },
+            { text: "bier", correct: false },
+            { text: "champagne", correct: true },
+            { text: "limoncello", correct: false }
+        ]
+    },
+    {
+        question: "wat is een gillende keukenmeid",
+        answers: [
+            {text: "iemand die hard gilt", correct: true }
+            {text  "een soort vuurwerk", correct: true}
+            {text: "lis want ze gilt te veel", correct: false}
+            {text: "een kok in de keuken", correct: false}
+        ]
+    }
 ];
 //hallo ik ben cas en dit is van mij
 const questionElement = document.getElementById('question');
