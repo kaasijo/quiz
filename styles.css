@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://th.bing.com/th/id/R.4b8564d0d9d51d19f8e9bf2a79a617ba?rik=ltT%2fYzcoZTCsjg&riu=http%3a%2f%2f4.bp.blogspot.com%2f-7NwKjSn3ywg%2fUKIQ-e8u9EI%2fAAAAAAAAI2k%2fgGPApmBEiD8%2fs1600%2ffoto-van-een-gigantisch-groot-vuurwerk-spektakel-hd-vuurwerk-wallpaper.jpg&ehk=%2f2Ye42WeH96HxGhOdfwTW3pDyrI2jgEpLWEoXUr%2frig%3d&risl=&pid=ImgRaw&r=0');
+    background-size: cover;
+    margin: 0;
+}
+
+#quiz-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#team-container {
+    margin-bottom: 20px;
+}
+
+#team-container input {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
