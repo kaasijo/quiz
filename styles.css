@@ -37,10 +37,11 @@ body {
     background: #007bff;
     color: white;
     border: none;
-    padding: 10px;
-    margin: 5px 0;
+    padding: 15px; /* Vergroot de padding */
+    margin: 10px 0; /* Vergroot de marge */
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1.2em; /* Vergroot de tekst */
 }
 
 .btn:hover {
@@ -53,4 +54,8 @@ body {
 
 .wrong {
     background-color: red;
+}
+
+.hide {
+    display: none;
 }
