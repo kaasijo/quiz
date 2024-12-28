@@ -2,23 +2,23 @@ const questions = [
     {
         question: "wat eten nederlanders met oud en nieuw?",
         answers: [
-            { text: "Pannekoeken", correct: false },
-            { text: "niks", correct: false },
-            { text: "oliebollen", correct: true },
-            { text: "poffertjes", correct: false }
+            { text: "A. Pannekoeken", correct: false },
+            { text: "B. niks", correct: false },
+            { text: "C. oliebollen", correct: true },
+            { text: "D. poffertjes", correct: false }
         ]
     },
     {
         question: "Wat word er aangestoken met oud en nieuw?",
         answers: [
-            { text: "Vuurwerk", correct: true },
-            { text: "hout", correct: false },
-            { text: "bommen", correct: true },
-            { text: "de kachel", correct: false }
+            { text: "A. Vuurwerk", correct: true },
+            { text: "B. hout", correct: false },
+            { text: "C. bommen", correct: true },
+            { text: "D. de kachel", correct: false }
         ]
     },
     {
-        question: "Welk lied wordt traditioneel gezongen bij middernacht op Oudjaarsavond",
+        question: "welk lied past goed bij oud en nieuw",
         answers: [
             { text: "happy new year", correct: true },
             { text: "we wish you an merry christmas", correct: false },
@@ -43,6 +43,17 @@ const questions = [
             { text: "bij de kerk", correct: false },
             { text: "times square", correct: true }
         ]
+    },
+    {
+        question: "welke dag valt 31 dec in 2024?",
+        answers: [
+            { text: "maandag", correct: false },
+            { text: "dinsdag", correct: true },
+            { text: "woensdag", correct: false },
+            { text: "donderdag", correct: false },
+            { text: "vrijdag", correct: false},
+            { text: "zaterdag", correct: false }
+        ] 
     },
 ];
 //hallo ik ben cas en dit is van mij
@@ -153,7 +164,7 @@ function updateCurrentTeam() {
 }
 
 function showEndScreen() {
-    questionElement.innerText = 'Quiz afgelopen!';
+    questionElement.innerText = 'Quiz afgelopen!   gemaakt door: Cas en Ties';
     answerButtonsElement.innerHTML = '';
     nextButton.classList.add('hide');
     scoreElement.innerText = `${team1Input.value || 'Team 1'}: ${team1Score} - ${team2Input.value || 'Team 2'}: ${team2Score} - ${team3Input.value || 'Team 3'}: ${team3Score}`;
