@@ -35,6 +35,15 @@ const questions = [
             { text: "limoncello", correct: false }
         ]
     },
+    {
+        question: "op welk plein in new york laten ze om 12 uur met oud en nieuw een bal vallen?",
+        answers: [
+            { text: "5th avenue", correct: false },
+            { text: "central park", correct: false },
+            { text: "bij de kerk", correct: false },
+            { text: "times square", correct: true }
+        ]
+    },
 ];
 //hallo ik ben cas en dit is van mij
 const questionElement = document.getElementById('question');
