@@ -1,5 +1,20 @@
 const questions = [
     {
+        question: "catogorie 1. testvragen",
+        answers: [
+            { text: "begin", correct: false },
+        ]
+    },
+    {
+        question: "wat eten nederlanders met oud en nieuw?",
+        answers: [
+            { text: "A. Pannekoeken", correct: false },
+            { text: "B. niks", correct: false },
+            { text: "C. oliebollen", correct: true },
+            { text: "D. poffertjes", correct: false }
+        ]
+    },
+    {
         question: "wat eten nederlanders met oud en nieuw?",
         answers: [
             { text: "A. Pannekoeken", correct: false },

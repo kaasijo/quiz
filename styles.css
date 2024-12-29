@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('https://www.bing.com/ck/a?!&&p=5d5d124ef377fca0e6f5c11288f2f69f0a5dd2b1234863cb0760425fcd6091abJmltdHM9MTczNTQzMDQwMA&ptn=3&ver=2&hsh=4&fclid=1f076f67-93ac-6ada-3bde-7ba7922f6b0f&u=a1L2ltYWdlcy9zZWFyY2g_cT12dXVyd2VrciUyMGFjaHRlcmdyb25kJkZPUk09SVFGUkJBJmlkPTY0MDBERTc2QjQ4NjU4OUY4NjYwMzY2MkM1QzVEMjNFM0M4NDI0NTI&ntb=1');
+    background-image: url('achtergrond.png');
     background-size: cover;
     margin: 0;
 }
