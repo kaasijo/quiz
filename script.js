@@ -15,12 +15,9 @@ const questions = [
         ]
     },
     {
-        question: "wat eten nederlanders met oud en nieuw?",
+        question: "catogorie 2. vragen over nieuwjaar.",
         answers: [
-            { text: "A. Pannekoeken", correct: false },
-            { text: "B. niks", correct: false },
-            { text: "C. oliebollen", correct: true },
-            { text: "D. poffertjes", correct: false }
+            { text: "ga door", correct: false },
         ]
     },
     {
@@ -77,6 +74,12 @@ const questions = [
             { text: "central park", correct: false },
             { text: "bij de kerk", correct: false },
             { text: "times square", correct: true }
+        ]
+    },
+    {
+        question: "catogorie 3. algemene kennis vragen.",
+        answers: [
+            { text: "ga door", correct: false },
         ]
     },
 ];
