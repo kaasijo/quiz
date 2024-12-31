@@ -109,6 +109,14 @@ const questions = [
             { text: "1.000.000 – 1.500.000", correct: false },
         ]
     },
+    {
+        question: "hoe noem je iemand die in india woont?’",
+        answers: [
+            { text: "indiër", correct: true },
+            { text: "indiaan", correct: false },
+            { text: "1indiaanse", correct: false },
+        ]
+    },
 
 ];
 /* HIER WORDEN DE VARIABELEN AANGEMAAKT OM VERDER TE GEBRUIKEN, getElementById BETEKENT PAK
