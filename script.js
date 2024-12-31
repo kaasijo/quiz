@@ -125,6 +125,21 @@ const questions = [
             { text: "C. nee vrouwen laten er meer", correct: false },
         ]
     },
+    {
+        question: "zing mee met dit liedje voor extra punten?’",
+        answers: [
+            { text: "extra punten", correct: true },
+            { text: "geen punten", correct: false },
+        ]
+    },
+    {
+        question: "welk dier steekt en maakt honing?’",
+        answers: [
+            { text: "A. honingbij", correct: true },
+            { text: "B. wesp", correct: false },
+            { text: "C. bij", correct: false },
+        ]
+    },
 
 ];
 /* HIER WORDEN DE VARIABELEN AANGEMAAKT OM VERDER TE GEBRUIKEN, getElementById BETEKENT PAK
