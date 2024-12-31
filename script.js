@@ -1,3 +1,4 @@
+/* DE VRAGEN  */
 const questions = [
     {
         question: "catogorie 1. testvragen",
@@ -83,7 +84,8 @@ const questions = [
         ]
     },
 ];
-//hallo ik ben cas en dit is van mij
+/* HIER WORDEN DE VARIABELEN AANGEMAAKT OM VERDER TE GEBRUIKEN, getElementById BETEKENT PAK
+HET ELEMENT VAN DE WEBSITE MET DIE ID-NAAM */
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const nextButton = document.getElementById('next-btn');
@@ -92,10 +94,11 @@ const team1Input = document.getElementById('team1');
 const team2Input = document.getElementById('team2');
 const team3Input = document.getElementById('team3');
 const currentTeamElement = document.getElementById('current-team');
-
 const correctSound = new Audio('correct.mp3');
 const wrongSound = new Audio('wrong.mp3');
 
+/* HIER WORDEN DE VARABELEN OP EEN START-GETAL GEZET. DUS WELKE WAARDE DE VARIABELE MOET
+HEBBEN BIJ START PROGRAMMA */
 let currentQuestionIndex = 0;
 let team1Score = 0;
 let team2Score = 0;
@@ -103,31 +106,33 @@ let team3Score = 0;
 let currentTeam = 1;
 let answersSelected = 0;
 
+/* DIT IS DE 1E FUNCTIE GENAAMT startquiz. */
 function startQuiz() {
-    currentQuestionIndex = 0;
+    currentQuestionIndex = 0; //DE VARIABELEN WORDEN HIER ALLEMAAL OP STARTGETAL GEZET.
     team1Score = 0;
     team2Score = 0;
     team3Score = 0;
     currentTeam = 1;
     answersSelected = 0;
-    nextButton.classList.add('hide');
-    showQuestion();
-    updateCurrentTeam();
+    nextButton.classList.add('hide'); //BETEKEND DAT DEZE BUTTON ONZICHTBAAR IS BIJ START
+    showQuestion(); //HIER WORDT DE FUNCTIE showQuestion OPGESTART / AANGEROEPEN.
+    updateCurrentTeam(); //HIER WORDT DE FUNCTIE updateCurrentTeam AANGEROEPEN.
 }
 
+/* DIT IS DE FUNCTIE showQuestion. (DIE WORDT DUS HIERBOVEN AANGEROEPEN DOOR DE ANDERE FUNCTIE) */
 function showQuestion() {
-    resetState();
-    if (currentQuestionIndex >= questions.length) {
-        showEndScreen();
-        return;
+    resetState(); //HIER WORDT FUNCTIE resetState AANGEROEPEN. KIJK BIJ DIE FUNCTIE WAT HIJ DOET.
+    if (currentQuestionIndex >= questions.length) { //ZOLANG AANTAL VRAGEN NIET OP ZIJN GA DOOR ANDERS START FUNCTIE showEndScreen
+        showEndScreen(); //FUNCTIE, KIJK BIJ DIE FUNCTIE WAT HIJ DOET.
+        return; //BETEKEND GA TERUG NAAR DE FUNCTIE DIE DEZE FUNCTIE showQuestion HEEFT AANGEROEPEN.
     }
-    const currentQuestion = questions[currentQuestionIndex];
-    questionElement.innerText = currentQuestion.question;
-    currentQuestion.answers.forEach(answer => {
-        const button = document.createElement('button');
-        button.innerText = answer.text;
-        button.classList.add('btn');
-        if (answer.correct) {
+    const currentQuestion = questions[currentQuestionIndex]; //IS DUS 0 BIJ 1E START WANT currentQuistionINDEX IS HIERBOVEN OP 0 GEZET.
+    questionElement.innerText = currentQuestion.question; //HIER WORDT DE TEXT VERANDERD VAN questionElement-id (DUS OP DE WEBSITE/INDEX.HTML)
+    currentQuestion.answers.forEach(answer => { //"LOOP" DOOR ALLE ANTWOORDEN HEEN VAN DE HUIDIGE VRAAG
+        const button = document.createElement('button'); //MAAK EEN BUTTON AAN MET DE NAAM ´button'.
+        button.innerText = answer.text; //VERANDER DE TEKST IN DE BUTTON MET DE TEKST VAN HET ANTWOORD VAN DE HUIDIGE VRAAG
+        button.classList.add('btn'); //VOEG DE BUTTON TOE AAN CLASS ´btn' CLASS IS STIJL VAN DE BUTTON, ZIE styles.css
+        if (answer.correct) { //ALS HET ANTWOORD GOED IS DOE DIT:
             button.dataset.correct = answer.correct;
         }
         button.addEventListener('click', selectAnswer);

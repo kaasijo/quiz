@@ -11,7 +11,9 @@ body {
 
 #quiz-container {
     background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    width: 800px; /*om quiz groter te maken qua scherm */
+    height: 700px; /*om quiz groter te maken qua scherm */
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -59,3 +61,14 @@ body {
 .hide {
     display: none;
 }
+
+#question-container {
+    font-size: 1.2em; /* Vergroot de tekst */
+    text-shadow: 5px 5px 10px rgb(15, 187, 245);
+}
+
+#current-team {
+    font-size: 1.3em;
+
+}
+
