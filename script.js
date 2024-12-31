@@ -61,20 +61,20 @@ const questions = [
         question: "welke dag valt 31 dec in 2024?",
         answers: [
             { text: "A. maandag", correct: false },
-            { text: "dinsdag", correct: true },
-            { text: "woensdag", correct: false },
-            { text: "donderdag", correct: false },
-            { text: "vrijdag", correct: false},
-            { text: "zaterdag", correct: false }
+            { text: "B. dinsdag", correct: true },
+            { text: "C. woensdag", correct: false },
+            { text: "E. donderdag", correct: false },
+            { text: "F. vrijdag", correct: false},
+            { text: "G. zaterdag", correct: false }
         ] 
     },
     {
         question: "op welk plein in new york laten ze om 12 uur met oud en nieuw een bal vallen?",
         answers: [
-            { text: "5th avenue", correct: false },
-            { text: "central park", correct: false },
-            { text: "bij de kerk", correct: false },
-            { text: "times square", correct: true }
+            { text: "A. 5th avenue", correct: false },
+            { text: "B. central park", correct: false },
+            { text: "C. bij de kerk", correct: false },
+            { text: "D. times square", correct: true }
         ]
     },
     {
@@ -86,35 +86,43 @@ const questions = [
     {
         question: "Welk product werd gepromoot met de zin: ‘Stom hè, ik vind het gewoon lekker.’",
         answers: [
-            { text: "calvé pindakaas", correct: true },
-            { text: "albert heijn pindakaas", correct: false },
-            { text: "gwoon hagelsag", correct: false },
-            { text: "jumbo hagelslag", correct: false }
+            { text: "A. calvé pindakaas", correct: true },
+            { text: "B. albert heijn pindakaas", correct: false },
+            { text: "C. gwoon hagelsag", correct: false },
+            { text: "D. jumbo hagelslag", correct: false }
         ]
     },
     {
         question: "Maak de volgende zin in één keer af: Ork, ork, ork, soep eet je met een?’",
         answers: [
-            { text: "vork", correct: false },
-            { text: "lepel", correct: true },
-            { text: "vorken", correct: false },
-            { text: "lepels", correct: false }
+            { text: "A. vork", correct: false },
+            { text: "B. lepel", correct: true },
+            { text: "C. vorken", correct: false },
+            { text: "E. lepels", correct: false }
         ]
     },
     {
         question: "Hoeveel haren heeft een mens gemiddeld op zijn of haar hoofd zitten?’",
         answers: [
-            { text: "10.000 – 15.000", correct: false },
-            { text: "100.000 – 150.000", correct: true },
-            { text: "1.000.000 – 1.500.000", correct: false },
+            { text: "A. 10.000 – 15.000", correct: false },
+            { text: "B. 100.000 – 150.000", correct: true },
+            { text: "C. 1.000.000 – 1.500.000", correct: false },
         ]
     },
     {
         question: "hoe noem je iemand die in india woont?’",
         answers: [
-            { text: "indiër", correct: true },
-            { text: "indiaan", correct: false },
-            { text: "1indiaanse", correct: false },
+            { text: "A. indiër", correct: true },
+            { text: "B. indiaan", correct: false },
+            { text: "C. indiaanse", correct: false },
+        ]
+    },
+    {
+        question: "laten vrouwen evenveel scheten als mannen?’",
+        answers: [
+            { text: "A. ja", correct: false },
+            { text: "B. nee, mannen laten er meer", correct: true },
+            { text: "C. nee vrouwen laten er meer", correct: false },
         ]
     },
 
