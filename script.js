@@ -184,11 +184,11 @@ function showQuestion() {
 }
 
 function resetState() {
-    nextButton.classList.add('hide');
-    while (answerButtonsElement.firstChild) {
+    nextButton.classList.add('hide'); //VERBERG DE NEXT BUTTON
+    while (answerButtonsElement.firstChild) { //ZOLANG ER ANTWOORD KNOPPEN ZIJN VERWIJDER DEZE
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
-    answersSelected = 0;
+    answersSelected = 0; //ZET VARIABELE OP 0. DUS GEEN ANTWOORDEN GESELECTEERD MEER. 
 }
 
 function selectAnswer(e) {
