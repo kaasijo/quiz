@@ -1,7 +1,7 @@
 /* DE VRAGEN  */
 const questions = [
     {
-        question: "catogorie 1. testvragen",
+        question: "catogorie 1. oefenvragen",
         answers: [
             { text: "begin", correct: false },
         ]
@@ -83,6 +83,33 @@ const questions = [
             { text: "ga door", correct: false },
         ]
     },
+    {
+        question: "Welk product werd gepromoot met de zin: ‘Stom hè, ik vind het gewoon lekker.’",
+        answers: [
+            { text: "calvé pindakaas", correct: true },
+            { text: "albert heijn pindakaas", correct: false },
+            { text: "gwoon hagelsag", correct: false },
+            { text: "jumbo hagelslag", correct: false }
+        ]
+    },
+    {
+        question: "Maak de volgende zin in één keer af: Ork, ork, ork, soep eet je met een?’",
+        answers: [
+            { text: "vork", correct: false },
+            { text: "lepel", correct: true },
+            { text: "vorken", correct: false },
+            { text: "lepels", correct: false }
+        ]
+    },
+    {
+        question: "Hoeveel haren heeft een mens gemiddeld op zijn of haar hoofd zitten?’",
+        answers: [
+            { text: "10.000 – 15.000", correct: false },
+            { text: "100.000 – 150.000", correct: true },
+            { text: "1.000.000 – 1.500.000", correct: false },
+        ]
+    },
+
 ];
 /* HIER WORDEN DE VARIABELEN AANGEMAAKT OM VERDER TE GEBRUIKEN, getElementById BETEKENT PAK
 HET ELEMENT VAN DE WEBSITE MET DIE ID-NAAM */
