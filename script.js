@@ -207,7 +207,7 @@ function resetState() {
 }
 
 function selectAnswer(e) { //FUNCTIE WELKE GEBEURT ALS ER OP ANTWOORDKNOP GEDRUKT WORDT.
-    const selectedButton = e.target;
+    const selectedButton = e.target; //e.target LEEST UIT WELKE KNOP ER GEKRUKT IS 
     const correct = selectedButton.dataset.correct === 'true';
     if (correct) {
         correctSound.play();
