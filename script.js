@@ -191,7 +191,7 @@ function showQuestion() {
         button.innerText = answer.text; //VERANDER DE TEKST IN DE BUTTON MET DE TEKST VAN HET ANTWOORD VAN DE HUIDIGE VRAAG
         button.classList.add('btn'); //VOEG DE BUTTON TOE AAN CLASS ´btn' CLASS IS STIJL VAN DE BUTTON, ZIE styles.css
         if (answer.correct) { //ALS HET ANTWOORD GOED IS DOE DIT:
-            button.dataset.correct = answer.correct; //TODO VOLGENS MIJ IS DIT DAT HET JUISTE ANTWOORD AAN DE DATASET WORDT TOEGEVOEGD
+            button.dataset.correct = answer.correct; //HET JUISTE ANTWOORD AAN DE DATASET TOEVOEGEN (IN DE HTML STAAT WELKE GOED IS)
         }
         button.addEventListener('click', selectAnswer); //ALS ER OP DE KNOP GEDRUKT (click) WORDT DAN VOER FUNCTIE selectAnswer UIT
         answerButtonsElement.appendChild(button); // VOEG DE KNOP TOE AAN answerButtonsElement. DAT IS EEN PLEK WAAR DE KNOPPEN KOMEN (ZIE OOK DE HTML FILE)
@@ -206,7 +206,7 @@ function resetState() {
     answersSelected = 0; //ZET VARIABELE OP 0. DUS GEEN ANTWOORDEN GESELECTEERD MEER. 
 }
 
-function selectAnswer(e) {
+function selectAnswer(e) { //FUNCTIE WELKE GEBEURT ALS ER OP ANTWOORDKNOP GEDRUKT WORDT.
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
     if (correct) {
