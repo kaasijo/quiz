@@ -184,7 +184,7 @@ function showQuestion() {
         showEndScreen(); //FUNCTIE, KIJK BIJ DIE FUNCTIE WAT HIJ DOET.
         return; //BETEKEND GA TERUG NAAR DE FUNCTIE DIE DEZE FUNCTIE showQuestion HEEFT AANGEROEPEN.
     }
-    const currentQuestion = questions[currentQuestionIndex]; //IS DUS 0 BIJ 1E START WANT currentQuistionINDEX IS HIERBOVEN OP 0 GEZET.
+    const currentQuestion = questions[currentQuestionIndex]; //IS DUS 0 BIJ 1E START WANT currentQuistionINDEX IS HIERBOVEN OP 0 GEZET. currentQuestion IS DUS DE HUIDIGE VRAAG
     questionElement.innerText = currentQuestion.question; //HIER WORDT DE TEXT VERANDERD VAN questionElement-id (DUS OP DE WEBSITE/INDEX.HTML)
     currentQuestion.answers.forEach(answer => { //"LOOP" DOOR ALLE ANTWOORDEN HEEN VAN DE HUIDIGE VRAAG
         const button = document.createElement('button'); //MAAK EEN BUTTON AAN MET DE NAAM ´button'.
@@ -208,7 +208,7 @@ function resetState() {
 
 function selectAnswer(e) { //FUNCTIE WELKE GEBEURT ALS ER OP ANTWOORDKNOP GEDRUKT WORDT.
     const selectedButton = e.target; //e.target LEEST UIT WELKE KNOP ER GEKRUKT IS 
-    const correct = selectedButton.dataset.correct === 'true';
+    const correct = selectedButton.dataset.correct === 'true'; //LEES VAN DE selectedButton UIT 
     if (correct) {
         correctSound.play();
         if (currentTeam === 1) {
