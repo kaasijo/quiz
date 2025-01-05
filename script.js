@@ -208,67 +208,74 @@ function resetState() {
 
 function selectAnswer(e) { //FUNCTIE WELKE GEBEURT ALS ER OP ANTWOORDKNOP GEDRUKT WORDT.
     const selectedButton = e.target; //e.target LEEST UIT WELKE KNOP ER GEKRUKT IS 
-    const correct = selectedButton.dataset.correct === 'true'; //LEES VAN DE selectedButton UIT 
-    if (correct) {
-        correctSound.play();
-        if (currentTeam === 1) {
-            team1Score++;
-        } else if (currentTeam === 2) {
-            team2Score++;
-        } else {
-            team3Score++;
+    const correct = selectedButton.dataset.correct === 'true'; //VERGELIJKT DE DATA-WAARDE VAN HET ANTWOORD 
+                                                               // MET DE TEKST "TRUE", ALS DEZE GELIJK IS DAN 
+                                                               // KRIJGT DE VARIABELE CORRECT OOK DE WAARDE TRUE, 
+                                                               // ANDERS FALSE
+    if (correct) { //ALS DE VARIABELE correct TRUE IS:
+        correctSound.play(); //SPEEL GELUID AF
+        if (currentTeam === 1) { //ALS HET HUIDIGE TEAM 1 IS DAN:
+            team1Score++; //TEL 1 PUNT OP BIJ TEAM 1
+        } else if (currentTeam === 2) { //ALS HET HUIDIGE TEAM 2 IS DAN:
+            team2Score++; //TEL 1 PUNT OP BIJ TEAM 2
+        } else { //ALS HET HUIDIGE TEAM 3 IS DAN:
+            team3Score++; //TEL 1 PUNT OP BIJ TEAM 3
         }
-    } else {
-        wrongSound.play();
+    } else { //ALS DE VARIABELE correct FALSE IS:
+        wrongSound.play();//SPEEL GELUID AF
     }
-    selectedButton.classList.add('selected');
-    answersSelected++;
-    if (answersSelected === 3) {
-        Array.from(answerButtonsElement.children).forEach(button => {
-            setStatusClass(button, button.dataset.correct);
+    selectedButton.classList.add('selected'); //VOEG CLASS TOE AAN DE GESLECTEERDE KNOP
+    answersSelected++; //TEL 1 OP BIJ answersSelected
+    if (answersSelected === 3) { //ALS ER 3 ANTWOORDEN GESELECTEERD ZIJN DAN:
+        Array.from(answerButtonsElement.children).forEach(button => { //maak een array van de kinderen van answerButtonsElement
+            setStatusClass(button, button.dataset.correct); //ROEP FUNCTIE setStatusClass AAN MET DE KNOP EN OF HET ANTWOORD GOED IS
         });
-        nextButton.classList.remove('hide');
+        nextButton.classList.remove('hide'); //LAAT DE NEXT BUTTON ZIEN
     }
-    currentTeam = currentTeam === 1 ? 2 : currentTeam === 2 ? 3 : 1;
-    updateCurrentTeam();
+    currentTeam = currentTeam === 1 ? 2 : currentTeam === 2 ? 3 : 1; //ALS HET HUIDIGE TEAM 1 IS DAN WORDT HET 2, ANDERS 3, ANDERS 1
+                                                                     // https://www.geeksforgeeks.org/javascript-ternary-operator/
+    updateCurrentTeam(); //ROEP FUNCTIE updateCurrentTeam AAN
 }
 
-function setStatusClass(element, correct) {
-    clearStatusClass(element);
-    if (correct) {
-        element.classList.add('correct');
+function setStatusClass(element, correct) { //FUNCTIE WELKE DE STATUS VAN DE KNOP VERANDERD
+    clearStatusClass(element); //ROEP FUNCTIE clearStatusClass AAN
+    if (correct) { //ALS HET ANTWOORD GOED IS DAN:
+        element.classList.add('correct'); //VOEG CLASS 'correct' TOE
     } else {
-        element.classList.add('wrong');
+        element.classList.add('wrong'); //ANDERS VOEG CLASS 'wrong' TOE
     }
 }
 
-function clearStatusClass(element) {
-    element.classList.remove('correct');
-    element.classList.remove('wrong');
-    element.classList.remove('selected');
+function clearStatusClass(element) { //FUNCTIE WELKE DE STATUS VAN DE KNOP VERWIJDERD
+    element.classList.remove('correct'); //VERWIJDER DE CLASS 'correct'
+    element.classList.remove('wrong'); //VERWIJDER DE CLASS 'wrong'
+    element.classList.remove('selected'); //VERWIJDER DE CLASS 'selected'
 }
 
-function updateCurrentTeam() {
-    const teamName = currentTeam === 1 ? team1Input.value || 'Team 1' : currentTeam === 2 ? team2Input.value || 'Team 2' : team3Input.value || 'Team 3';
-    currentTeamElement.innerText = `Huidig team: ${teamName}`;
+function updateCurrentTeam() { //FUNCTIE WELKE HET HUIDIGE TEAM VERANDERD
+    const teamName = currentTeam === 1 ? team1Input.value || 'Team 1' : currentTeam === 2 ? team2Input.value || 'Team 2' : team3Input.value || 'Team 3'; 
+    //ALS HET HUIDIGE TEAM 1 IS DAN WORDT DE NAAM VAN TEAM 1 GEPAKT ANDERS TEAM 2, ANDERS TEAM 3
+    // ( || BETEKEND ¨OR" DUS BIJ GEEN TEAMNAAM WORDT DIE STRING INGEVULD )
+    currentTeamElement.innerText = `Huidig team: ${teamName}`; //VERANDER DE TEKST VAN currentTeamElement MET DE NAAM VAN HET HUIDIGE TEAM
 }
 
 function showEndScreen() {
-    questionElement.innerText = 'Quiz afgelopen!';
-    answerButtonsElement.innerHTML = '';
+    questionElement.innerText = 'Quiz afgelopen!'; //VERANDER DE TEKST VAN questionElement
+    answerButtonsElement.innerHTML = ''; //MAAK ALLE KNOPPEN LEEG
     nextButton.textContent = 'Opnieuw'; // Verander de tekst van de knop
-    nextButton.classList.remove('hide');
-    scoreElement.innerText = `${team1Input.value || 'Team 1'}: ${team1Score} - ${team2Input.value || 'Team 2'}: ${team2Score} - ${team3Input.value || 'Team 3'}: ${team3Score}`;
-    const endMessage = document.createElement('p');
-    endMessage.innerText = 'Bedankt voor het spelen!';
-    document.getElementById('quiz-container').appendChild(endMessage);
-    quizContainer.classList.add('hide');
-    fireworksVideo.classList.remove('hide');
+    nextButton.classList.remove('hide'); //LAAT DE KNOP ZIEN
+    scoreElement.innerText = `${team1Input.value || 'Team 1'}: ${team1Score} - ${team2Input.value || 'Team 2'}: ${team2Score} - ${team3Input.value || 'Team 3'}: ${team3Score}`; 
+    //VERANDER DE TEKST VAN scoreElement MET DE SCORES VAN DE TEAMS
+    const endMessage = document.createElement('p'); //MAAK EEN NIEUW ELEMENT (PARAGRAAF IN DIT GEVAL) AAN
+    endMessage.innerText = 'Bedankt voor het spelen!'; //VERANDER DE TEKST VAN HET NIEUWE ELEMENT
+    document.getElementById('quiz-container').appendChild(endMessage); //VOEG HET NIEUWE ELEMENT TOE AAN DE QUIZ-CONTAINER
+    quizContainer.classList.add('hide'); //VERBERG DE QUIZ-CONTAINER
+    fireworksVideo.classList.remove('hide'); 
 }
 
 nextButton.addEventListener('click', () => {
-    currentQuestionIndex++;
-    showQuestion();
+    currentQuestionIndex++; //TEL 1 OP BIJ DE HUIDIGE VRAAG
+    showQuestion(); //ROEP FUNCTIE showQuestion AAN
 });
 
-startQuiz();
+startQuiz(); //ROEP FUNCTIE startQuiz AAN

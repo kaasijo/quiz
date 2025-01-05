@@ -3,6 +3,7 @@ const questions = [
         question: "catogorie 1. oefenvragen",
         answers: [
             { text: "begin", correct: false },
+            { text: 'einde', correct: true }
         ]
     },
     {
@@ -17,9 +18,12 @@ const questions = [
 ]
 
 questions.forEach(question => {
-    question.forEach(answers => {
-        if (answers.correct === true)
-            console.log(question.text)
-    })
-    
-});
+
+    for (const answer of question.answers) {
+        // console.log('test')
+        // console.log(answer.text)
+        if (answer.correct === true)
+            console.log(answer.text)
+    }
+
+})
